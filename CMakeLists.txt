@@ -8,12 +8,12 @@ find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
 # Compile main program
-add_executable(masterSoftware masterSoftware.c)
+add_executable(submodule31 submodule31.c)
 
 # Compile test executable
-add_executable(test-masterSoftware test-masterSoftware.cpp)
-target_link_libraries(test-masterSoftware GTest::GTest GTest::Main pthread)
+add_executable(test-submodule31 test-submodule31.cpp)
+target_link_libraries(test-submodule31 GTest::GTest GTest::Main pthread)
 
 # Register test with CTest
-add_test(NAME master-software-test COMMAND test-masterSoftware)
+add_test(NAME submodule31 COMMAND test-submodule31)
 
